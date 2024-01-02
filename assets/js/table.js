@@ -22,7 +22,7 @@ $(function () {
 function makeBMSTable(info, mark) {
   var obj = $("#table_int");
   // Table Clear
-  obj.html("");
+  obj.empty();
   $(
     "<thead>" +
       "<tr>" +

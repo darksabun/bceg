@@ -80,7 +80,8 @@
   background-color: #ffa500;
 }
 
-.tableflame tr, a {
+.tableflame tr,
+a {
   /*Firefox向け*/
   -moz-transition-property: color, background-color;
   -moz-transition-duration: 0.2s;
@@ -121,5 +122,5 @@
 }
 
 #table_int a {
-  color:#000
+  color: #000;
 }
