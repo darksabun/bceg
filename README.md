@@ -1,9 +1,9 @@
-BMS chart Editors' Group (Archive)
-=
+# BMS chart Editors' Group (Archive)
+
 Homepage<br>
 <https://darksabun.github.io/bceg/><br><br>
 
-Twitter<br>
+X(Twitter)<br>
 <https://twitter.com/darksabun><br><br>
 
 Discord<br>
