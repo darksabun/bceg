@@ -38,13 +38,16 @@ function makeBMSTable(info, mark) {
   ).appendTo(obj);
   Array.prototype.forEach.call(info, function (i) {
     // Main text
-    var str = $("<tr class='tr_normal'></tr>");
-    if (i.state == 1) str = $("<tr class='state1'></tr>");
-    if (i.state == 2) str = $("<tr class='state2'></tr>");
-    if (i.state == 3) str = $("<tr class='state3'></tr>");
-    if (i.state == 4) str = $("<tr class='state4'></tr>");
-    if (i.state == 5) str = $("<tr class='state5'></tr>");
-    if (i.state == 6) str = $("<tr class='state6'></tr>");
+    var rowColor = {
+      1: "state1",
+      2: "state2",
+      3: "state3",
+      4: "state4",
+      5: "state5",
+      6: "state6",
+    };
+    if (i.state) var str = $("<tr class='" + rowColor[i.state] + "'></tr>");
+    else var str = $("<tr class='tr_normal'></tr>");
     // Level
     if (mark == "年") $("<td>" + i.level + mark + "</td>").appendTo(str);
     else if (mark.trim() == "AtoZ") $("<td>" + i.level + "</td>").appendTo(str);
@@ -72,13 +75,12 @@ function makeBMSTable(info, mark) {
     var astr = "";
     if (i.url) {
       if (i.artist) {
-        astr = "<a href='" + i.url + "' target='_blank'>" + i.artist + "</a>";
-      } else {
-        astr = "<a href='" + i.url + "' target='_blank'>" + i.url + "</a>";
-      }
-    } else {
-      if (i.artist) {
-        astr = i.artist;
+        astr =
+          "<a href='" +
+          i.url +
+          "' target='_blank'>" +
+          (i.artist || i.url) +
+          "</a>";
       }
     }
     if (i.url_pack) {
