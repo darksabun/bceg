@@ -55,7 +55,7 @@ function makeBMSTable(info, mark) {
     // View Chart
     $(
       "<td>" +
-        "<a href='http://www.ribbit.xyz/bms/score/view?p=1&md5=" +
+        "<a href='https://bms-score-viewer.pages.dev/view?md5=" +
         i.md5 +
         "' class='fas fa-lg fa-music' target='_blank'>" +
         "</a>" +
